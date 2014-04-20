@@ -1,0 +1,167 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 初期化
+===========================================================*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+	font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+
+
+body {
+    line-height:1.6;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+	display:block;
+}
+
+nav,ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+h1 { background:#000; padding:10px 20px;}
+h2 { background:#999; margin-bottom:30px; padding:10px 20px; font-size:16px; color:#FFF;}
+h3 { width:80%; margin:0 auto; color:#F15A24;}
+
+
+/* accordion
+===========================================================*/
+
+ul.accordion { font-size:16px; width:80%; padding:10px; background:#DDD; margin:0 auto 30px;}
+ul.accordion a { display:block; padding:10px; background-position:97% center; background-repeat:no-repeat; text-decoration:none; color:#333; font-weight:bold;}
+ul.accordion span { display:block; padding:10px; background-position:97% center; background-repeat:no-repeat; color:#333; font-weight:bold;}
+ul.accordion ul { display:none;}
+ul.accordion > li { background: -moz-linear-gradient(top, #C6F0FE, #27BCF9); background: -webkit-gradient(linear, left top, left bottom, from(#C6F0FE), to(#27BCF9));}
+ul.accordion > li > p { background: -moz-linear-gradient(top, #C6F0FE, #27BCF9); background: -webkit-gradient(linear, left top, left bottom, from(#C6F0FE), to(#27BCF9));cursor:pointer;}
+ul.accordion > li > ul > li { background:#999; border-bottom:1px solid #EEE;}
+ul.accordion > li > ul > li > p { background:#999;}
+ul.accordion > li > ul > li > a { background:url(../img/go.png) no-repeat 98% center;}
+ul.accordion > li > ul > li > ul > li { background:#FFF; border-bottom:1px dotted #888;}
+ul.accordion > li > ul > li > ul > li:last-child { border:none;}
+ul.accordion > li > p span { background-image:url(../img/open.png);}
+ul.accordion > li > p span.open { background-image:url(../img/close.png);}
+/*
+ul.accordion > li > a { background-image:url(img/a_link.png);}
+ul.accordion > li > ul > li > p span { background-image:url(img/b_close.png);}
+ul.accordion > li > ul > li > p span.open { background-image:url(img/b_open.png);}
+ul.accordion > li > ul > li > ul > li a { background-image:url(img/c_link.png); color:#333;} 
+*/
+
+dl.accordion { background:#DDD; width:80%; margin:0 auto 30px; padding:10px; font-size:16px;}
+dl.accordion dt {
+	background:url(../img/open.png) 97% center no-repeat,-moz-linear-gradient(top, #C6F0FE, #27BCF9);
+	background:url(../img/open.png) 97% center no-repeat,-webkit-gradient(linear, left top, left bottom, from(#C6F0FE), to(#27BCF9));
+	border-bottom:1px solid #EEE; height:40px; text-indent:10px; line-height:40px; color:#333; font-weight:bold; cursor:pointer;}
+dl.accordion dt.open {
+	background:url(../img/close.png) 97% center no-repeat,-moz-linear-gradient(top, #C6F0FE, #27BCF9);
+	background:url(../img/close.png) 97% center no-repeat,-webkit-gradient(linear, left top, left bottom, from(#C6F0FE), to(#27BCF9));}
+dl.accordion dd { background:#FFF; padding:10px; line-height:1.5; display:none;}
+
+
+
+/* footer
+===========================================================*/
+.footer { width:80%; margin:0 auto; text-align:right;}
+
+
+/* clearfix
+===========================================================*/
+.clearfix:after {
+  content: "."; 
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  min-height: 1%;
+}
+
+* html .clearfix {
+  height: 1%;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+
+
+
+
