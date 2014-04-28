@@ -20,15 +20,23 @@ time, mark, audio, video {
     padding:0;
     border:0;
     outline:0;
-	font-size:100%;
+	  font-size:100%;
     vertical-align:baseline;
     background:transparent;
 }
 
-
+img.imgtest{
+    -webkit-box-shadow: 0px 0px 100px #FFF inset;
+    -moz-box-shadow: 0px 0px 100px #FFF inset;
+    box-shadow: 0px 0px 100px #FFF inset;
+    width: 100%;
+}
 
 body {
     line-height:1.6;
+    background: -moz-linear-gradient(top, white, #dbf1d4);
+    background: -webkit-linear-gradient(top, white, #dbf1d4);
+    background: linear-gradient(white, #dbf1d4);
 }
 
 article,aside,details,figcaption,figure,
@@ -36,9 +44,26 @@ footer,header,hgroup,menu,nav,section {
 	display:block;
 }
 
+header{
+  margin-bottom: -7px;
+}
+
 nav,ul {
     list-style:none;
 }
+
+nav{
+  background-color: rgba(0,0,0,0);
+  /*
+  border-top: 2px solid #f99;
+  border-left: 5px solid #2ae;
+  border-right: 5px solid #ae2;
+  */
+  border-bottom: 2px solid #9f9;
+  font-size: 16px;
+  vertical-align: middle;
+  text-align: center;
+  }
 
 blockquote, q {
     quotes:none;
@@ -102,15 +127,15 @@ h3 { width:80%; margin:0 auto; color:#F15A24;}
 /* accordion
 ===========================================================*/
 
-ul.accordion { font-size:16px; width:80%; padding:10px; background:#DDD; margin:0 auto 30px;}
-ul.accordion a { display:block; padding:10px; background-position:97% center; background-repeat:no-repeat; text-decoration:none; color:#333; font-weight:bold;}
+ul.accordion { font-size:16px; width:100%; padding:0px; background:#DDD; margin:0 auto 30px;}
+ul.accordion a { display:block; padding:10px; background-position:97% center; background-repeat:no-repeat; text-decoration:none; color:#333; font-weight:bold; text-align: center;}
 ul.accordion span { display:block; padding:10px; background-position:97% center; background-repeat:no-repeat; color:#333; font-weight:bold;}
 ul.accordion ul { display:none;}
-ul.accordion > li { background: -moz-linear-gradient(top, #C6F0FE, #27BCF9); background: -webkit-gradient(linear, left top, left bottom, from(#C6F0FE), to(#27BCF9));}
-ul.accordion > li > p { background: -moz-linear-gradient(top, #C6F0FE, #27BCF9); background: -webkit-gradient(linear, left top, left bottom, from(#C6F0FE), to(#27BCF9));cursor:pointer;}
-ul.accordion > li > ul > li { background:#999; border-bottom:1px solid #EEE;}
-ul.accordion > li > ul > li > p { background:#999;}
-ul.accordion > li > ul > li > a { background:url(../img/go.png) no-repeat 98% center;}
+ul.accordion > li { background: -moz-linear-gradient(top, #C6F0FE, #ACBCF9); background: -webkit-gradient(linear, left top, left bottom, from(#C6F0FE), to(#ACBCF9));}
+ul.accordion > li > p { background: -moz-linear-gradient(top, #C6F0FE, #ACBCF9); background: -webkit-gradient(linear, left top, left bottom, from(#C6F0FE), to(#ACBCF9));cursor:pointer; text-align: center;}
+ul.accordion > li > ul > li { background:#FFF; border-bottom:1px solid #EEE;}
+ul.accordion > li > ul > li > p { background:#FFF;}
+ul.accordion > li > ul > li > a { background:url(../img/go.png) no-repeat 98% center;text-align: center;}
 ul.accordion > li > ul > li > ul > li { background:#FFF; border-bottom:1px dotted #888;}
 ul.accordion > li > ul > li > ul > li:last-child { border:none;}
 ul.accordion > li > p span { background-image:url(../img/open.png);}
@@ -122,21 +147,24 @@ ul.accordion > li > ul > li > p span.open { background-image:url(img/b_open.png)
 ul.accordion > li > ul > li > ul > li a { background-image:url(img/c_link.png); color:#333;} 
 */
 
-dl.accordion { background:#DDD; width:80%; margin:0 auto 30px; padding:10px; font-size:16px;}
+dl.accordion { background:#DDD; width:100%; margin:0 auto 30px; padding:0px; font-size:16px;}
 dl.accordion dt {
-	background:url(../img/open.png) 97% center no-repeat,-moz-linear-gradient(top, #C6F0FE, #27BCF9);
-	background:url(../img/open.png) 97% center no-repeat,-webkit-gradient(linear, left top, left bottom, from(#C6F0FE), to(#27BCF9));
+  text-align: center;
+	background:url(../img/open.png) 97% center no-repeat,-webkit-gradient(linear, left top, left bottom, from(#C6F0FE), to(#ACBCF9));
 	border-bottom:1px solid #EEE; height:40px; text-indent:10px; line-height:40px; color:#333; font-weight:bold; cursor:pointer;}
 dl.accordion dt.open {
-	background:url(../img/close.png) 97% center no-repeat,-moz-linear-gradient(top, #C6F0FE, #27BCF9);
-	background:url(../img/close.png) 97% center no-repeat,-webkit-gradient(linear, left top, left bottom, from(#C6F0FE), to(#27BCF9));}
-dl.accordion dd { background:#FFF; padding:10px; line-height:1.5; display:none;}
+  text-align: center;
+	background:url(../img/close.png) 97% center no-repeat,-moz-linear-gradient(top, #C6F0FE, #ACBCF9);
+	background:url(../img/close.png) 97% center no-repeat,-webkit-gradient(linear, left top, left bottom, from(#C6F0FE), to(#ACBCF9));}
+dl.accordion dd { background:#FFF; padding:10px; line-height:1.5; display:none; text-align: center;}
 
-
+.fonttest{
+  font-size: 48px
+}
 
 /* footer
 ===========================================================*/
-.footer { width:80%; margin:0 auto; text-align:right;}
+.footer { width:100%; margin:0 auto; text-align:right;}
 
 
 /* clearfix
