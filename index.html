@@ -7,13 +7,16 @@
     <title>WebDB</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/jquery.remodal.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/wysihtml5-0.3.0.js"></script>
     <script src="js/bootstrap3-wysihtml5.js"></script>
+    <script src="js/prettify.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/jquery.remodal.css" rel="stylesheet">
     <link href="css/bootstrap-wysihtml5.css" rel="stylesheet">
   </head>
-
+  <div class="remodal-bg">
 	<nav class="navbar navbar-default navbar-static-top" role="navigation">
   	<div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -52,7 +55,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+        <li><a href="#modal">Write</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
           <ul class="dropdown-menu">
@@ -68,24 +71,28 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-  <body>
+<body>
 <div class="jumbotron">
   <h1>BlogName</h1>
-  <div class="container">
+ 	 <div class="container">
     ...
-  </div>
+  	</div>
   <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
 </div>
 
+<div class="remodal" data-remodal-id="modal">
+	<textarea class="textarea form-control" placeholder="Enter text ..." style="width: 630px; height: 200px"></textarea>
+	<script>
+	    $('.textarea').wysihtml5();
+	</script>
+	<script type="text/javascript" charset="utf-8">
+	    $(prettyPrint);
+	</script>
 
-<textarea class="textarea form-control" placeholder="Enter text ..." style="width: 810px; height: 200px"></textarea>
-<script>
-    $('.textarea').wysihtml5();
-</script>
+    <a class="remodal-cancel" href="#">Cancel</a>
+    <a class="remodal-confirm" href="#">OK</a>
+</div>
 
-<script type="text/javascript" charset="utf-8">
-    $(prettyPrint);
-</script>
     <div class="panel-group" id="accordion">
 		  <div class="panel panel-default">
 		    <div class="panel-heading">
@@ -241,4 +248,5 @@
 		</ul>
 	</div>
   </body>
+  </div>
 </html>
