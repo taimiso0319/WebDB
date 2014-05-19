@@ -333,7 +333,6 @@ img {
 }
 .img-circle {
   border-radius: 50%;
-  max-width: 30%;
 }
 hr {
   margin-top: 20px;
@@ -568,39 +567,45 @@ a.bg-danger:hover {
   margin: 40px 0 20px;
   border-bottom: 1px solid #eee;
 }
-
-
-ul.accordion { font-size:16px; width:100%; padding:0px; background:#DDD; margin:0 auto 30px;}
-ul.accordion a { display:block; padding:10px; background-position:97% center; background-repeat:no-repeat; text-decoration:none; color:#333; font-weight:bold; text-align: center;}
-ul.accordion span { display:block; padding:10px; background-position:97% center; background-repeat:no-repeat; color:#333; font-weight:bold;}
-ul.accordion ul { display:none;}
-ul.accordion > li { background: -moz-linear-gradient(top, #C6F0FE, #ACBCF9); background: -webkit-gradient(linear, left top, left bottom, from(#C6F0FE), to(#ACBCF9));}
-ul.accordion > li > p { background: -moz-linear-gradient(top, #C6F0FE, #ACBCF9); background: -webkit-gradient(linear, left top, left bottom, from(#C6F0FE), to(#ACBCF9));cursor:pointer; text-align: center;}
-ul.accordion > li > ul > li { background:#FFF; border-bottom:1px solid #EEE;}
-ul.accordion > li > ul > li > p { background:#FFF;}
-ul.accordion > li > ul > li > a { background:url(../img/go.png) no-repeat 98% center;text-align: center;}
-ul.accordion > li > ul > li > ul > li { background:#FFF; border-bottom:1px dotted #888;}
-ul.accordion > li > ul > li > ul > li:last-child { border:none;}
-ul.accordion > li > p span { background-image:url(../img/open.png);}
-ul.accordion > li > p span.open { background-image:url(../img/close.png);}
-/*
-ul.accordion > li > a { background-image:url(img/a_link.png);}
-ul.accordion > li > ul > li > p span { background-image:url(img/b_close.png);}
-ul.accordion > li > ul > li > p span.open { background-image:url(img/b_open.png);}
-ul.accordion > li > ul > li > ul > li a { background-image:url(img/c_link.png); color:#333;} 
-*/
-
-dl.accordion { background:#DDD; width:100%; margin:0 auto 30px; padding:0px; font-size:16px;}
-dl.accordion dt {
-  text-align: center;
-  background:url(../img/open.png) 97% center no-repeat,-webkit-gradient(linear, left top, left bottom, from(#C6F0FE), to(#ACBCF9));
-  border-bottom:1px solid #EEE; height:40px; text-indent:10px; line-height:40px; color:#333; font-weight:bold; cursor:pointer;}
-dl.accordion dt.open {
-  text-align: center;
-  background:url(../img/close.png) 97% center no-repeat,-moz-linear-gradient(top, #C6F0FE, #ACBCF9);
-  background:url(../img/close.png) 97% center no-repeat,-webkit-gradient(linear, left top, left bottom, from(#C6F0FE), to(#ACBCF9));}
-dl.accordion dd { background:#FFF; padding:10px; line-height:1.5; display:none; text-align: center;}
-
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-bottom: 0;
+}
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline {
+  padding-left: 0;
+  margin-left: -5px;
+  list-style: none;
+}
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+dl {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+dt,
+dd {
+  line-height: 1.42857143;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0;
+}
 @media (min-width: 768px) {
   .dl-horizontal dt {
     float: left;
@@ -729,8 +734,8 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-  padding-right: 0px;
-  padding-left: 0px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -4122,6 +4127,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .breadcrumb > .active {
   color: #999;
 }
+
 .pagination {
   display: inline-block;
   padding-left: 0;
