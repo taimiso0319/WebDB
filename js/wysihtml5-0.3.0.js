@@ -5403,6 +5403,7 @@ wysihtml5.dom.replaceWithChildNodes = function(node) {
       var that   = this,
           iframe = doc.createElement("iframe");
       iframe.className = "wysihtml5-sandbox";
+      iframe.id = "iframe";
       wysihtml5.dom.setAttributes({
         "security":           "restricted",
         "allowtransparency":  "true",
@@ -8055,7 +8056,7 @@ wysihtml5.views.View = Base.extend(
       this.textarea           = this.parent.textarea;
       this.element.innerHTML  = this.textarea.getValue(true);
       this.enable();
-      
+      this.element.id = "testdesuyo";
       // Make sure our selection handler is ready
       this.selection = new wysihtml5.Selection(this.parent);
       
@@ -8074,6 +8075,7 @@ wysihtml5.views.View = Base.extend(
       }
 
       this.observe();
+
 
       var name = this.config.name;
       if (name) {
