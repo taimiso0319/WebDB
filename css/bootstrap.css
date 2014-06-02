@@ -3825,7 +3825,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     padding-bottom: 15px;
   }
   .navbar-nav.navbar-right:last-child {
-    margin-right: -15px;
+    margin-right: 0px;
   }
 }
 @media (min-width: 768px) {
@@ -4937,7 +4937,7 @@ a.list-group-item-danger.active:focus {
   border-radius: 4px;
 }
 .panel-group .panel + .panel {
-  margin-top: 5px;
+  margin-top: 0px;
 }
 .panel-group .panel-heading {
   border-bottom: 0;
