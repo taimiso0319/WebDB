@@ -16,6 +16,8 @@
     <link href="css/jquery.remodal.css" rel="stylesheet">
     <link href="css/bootstrap-wysihtml5.css" rel="stylesheet">
   </head>
+
+<body>
   <div class="remodal-bg">
 	<nav class="navbar navbar-default navbar-static-top" role="navigation">
   	<div class="container-fluid">
@@ -49,7 +51,6 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<body>
 <div class="jumbotron">
   <h1>BlogName</h1>
  	 <div class="container">
@@ -59,13 +60,18 @@
 </div>
 
 <div class="remodal" data-remodal-id="LearnModal">
-	<div class="profile">ここにプロフィール</div>
+	<div class="profile">ここにプロフィール
+		
+
+
+	</div>
 	<a class="remodal-cancel" href="#">Close</a>
 </div>
 <div class="remodal" data-remodal-id="modal">
 	<form>
 		<textarea class="textarea form-control" name="Post" placeholder="Enter text ..." style="width: 630px; height: 200px"></textarea>
 	</form>
+
 	<script>
 	    $('.textarea').wysihtml5();
 	</script>
@@ -78,22 +84,22 @@
 </div>
 
     <div class="panel-group" id="accordion" name="accs">
-		  <div class="keikei" id="0">
+		  <div class="art" id="0">
 		  	
 		  </div>
 	</div>
 <script type="text/javascript">
 	function disp(){
 		var node = document.getElementById("iframe").contentWindow.document.getElementsByTagName("body");
-		alert(node[0].innerHTML);
 		var counter = document.getElementsByName("accs");
 		//$('#keikei').attr("id","hoge");
-		var tag = parseInt($('.keikei').attr("id"))+1;
-		$('.keikei').prepend('<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse'+tag.toString()+'">'+date()+'</a></h4></div><div id="collapse'+tag.toString()+'" class="panel-collapse collapse in"><div class="panel-body">'+node[0].innerHTML+'</div></div></div>');
-		$('.keikei').attr("id",(tag).toString());
+		var tag = parseInt($('.art').attr("id"))+1;
+		$('.art').prepend('<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse'+tag.toString()+'">'+date()+'</a></h4></div><div id="collapse'+tag.toString()+'" class="panel-collapse collapse in"><div class="panel-body">'+node[0].innerHTML+'</div></div></div>');
+		$('.art').attr("id",(tag).toString());
 		node[0].innerHTML = "";
 	}
 </script>
+
 <script type="text/javascript">
 	<!--
 	function date(){
@@ -116,6 +122,7 @@
 	}
 	// -->
 </script>
+
 	<div class="text-center">
 	    <ul class="pagination">
 		  <li class="disabled"><a href="#">&laquo;</a></li>
