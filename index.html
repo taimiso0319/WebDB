@@ -85,6 +85,7 @@
 <script type="text/javascript">
 	function disp(){
 		var node = document.getElementById("iframe").contentWindow.document.getElementsByTagName("body");
+		alert(node[0].innerHTML);
 		var counter = document.getElementsByName("accs");
 		//$('#keikei').attr("id","hoge");
 		var tag = parseInt($('.keikei').attr("id"))+1;
